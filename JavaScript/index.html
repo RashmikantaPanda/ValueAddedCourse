@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
 </head>
+
 <body>
+    <h1>Catch Me</h1>
+    <input type="text" placeholder="First Number" id="fn"> <br>
+    <select name="" id="op">
+        <option value="+"></option>
+        <option value="-"></option>
+        <option value="*"></option>
+        <option value="/"></option>
+    </select>
+    <br>
+    <input type="text" placeholder="Second Number" id="sn"><br>
+
+    <input type="submit" value="Calculate" id="submit">
+
     <script>
-        num1=12;
-        num2=13;
-        num3=num1+num2;
-        alert(num3)
+        function Calculate() {
+            let a = document.getElementById('fn').value;
+            let b = document.getElementById('sn').value;
+
+            let c = document.getElementById('op').value;
+
+            a=parseInt(a);
+            b=parseInt(b);
+            let res;
+            switch (c) {
+                case '+':
+                    res = a + b;
+                    break;
+                case '-':
+                    res = a - b;
+                    break;
+                case '*':
+                    res = a * b;
+                    break;
+                case '/':
+                    res = a / b;
+                    break;
+
+            }
+        }
+
     </script>
-    
+
 </body>
+
 </html>
