@@ -35,6 +35,20 @@ function validate(e){
         mobile_error.innerHTML="";
     }
 
+    let atPos=email.indexOf("@");
+    let dotPos=email.lastIndexOf(".");
+    if(email == ""){
+        email_error.innerHTML="Email is required";
+        error=true;
+    }
+    else if(atPos<4 ||dotPos-atPos <4 || dotPos > email.length-3){
+        email_error.innerHTML="Please enter a valid email";
+        error=true;
+    }
+    else{
+        email_error.innerHTML="";
+    }
+
     if(error){
         e.preventDefault();
     }
