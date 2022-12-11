@@ -15,33 +15,33 @@
                     <h2>Sign Up</h2>
                 </div>
                 <div class="card-body">
-                    <form action="thank-you.html" class="card-body">
-                        <div class="mb-2">
-                            <label for="">Name</label>
+                    <form action="thank-you.html" class="card-body" onsubmit="validate(event)">
+                        <div class="mb-1">
+                            <label for="">Name</label> <Span class="text-danger">*</Span>
                             <input type="text" name="name" id="name" class="form-control">
                             <label class="text-danger" id="name_error">
                             </label>
                         </div>
-                        <div class="mb-2">
-                            <label for="">Mobile</label>
+                        <div class="mb-1">
+                            <label for="">Mobile</label> 
                             <input type="text" name="mobile" id="mobile" class="form-control">
                             <label class="text-danger" id="mobile_error">
                             </label>
                         </div>
-                        <div class="mb-2">
-                            <label for="">Email</label>
+                        <div class="mb-1">
+                            <label for="">Email</label>   <Span class="text-danger">*</Span>
                             <input type="text" name="email" id="email" class="form-control">
                             <label class="text-danger" id="email_error">
                             </label>
                         </div>
-                        <div class="mb-2">
-                            <label for="">Password</label>
+                        <div class="mb-1">
+                            <label for="">Password</label>  <Span class="text-danger">*</Span>
                             <input type="password" name="password" id="password" class="form-control">
                             <label class="text-danger" id="password_error">
                             </label>
                         </div>
-                        <div class="mb-2">
-                            <label for="">Confirm Password</label>
+                        <div class="mb-1">
+                            <label for="">Confirm Password</label>  <Span class="text-danger">*</Span>
                             <input type="password" name="password2" id="password2" class="form-control">
                             <label class="text-danger" id="password2_error">
                             </label>
@@ -56,8 +56,8 @@
 
         </div>
     </div>
-    <script src="bootstrap/bootstrap.bundle.min.js.map">
-    </script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="validator.js"></script>
     
 </body>
 </html>
