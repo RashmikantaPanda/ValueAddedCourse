@@ -11,7 +11,7 @@ function validate(e){
     const mobile_error=document.getElementById("mobile_error");
     const email_error=document.getElementById("email_error");
     const password_error=document.getElementById("password_error");
-    const password2_error=document.getElementById("password2-error");
+    const password2_error=document.getElementById("password2_error");
     
     let error=false;
 
@@ -24,7 +24,7 @@ function validate(e){
     }
 
     if(mobile===""){
-        mobile_error.innerHTML="MobileNo is required";
+        mobile_error.innerHTML="Mobile No is required";
         error=true;
     }
     else if(isNaN(mobile)||mobile.length!=10){
@@ -48,6 +48,26 @@ function validate(e){
     else{
         email_error.innerHTML="";
     }
+
+    if(password === ""){
+        password_error.innerHTML = "Password is required";
+        error = true;
+    } else if(password.length < 6 || password.length >16){
+        password_error.innerHTML = "Password must be 6 - 15 character long";
+        error = true;
+    } else {
+        password_error.innerHTML = "";
+    }   
+
+    if(password2 === ""){
+        password2_error.innerHTML = "Confirm Password is required";
+        error = true;
+    } else if(password2!=password){
+        password2_error.innerHTML = "Password must be 6 - 15 character long";
+        error = true;
+    } else {
+        password2_error.innerHTML = "";
+    }       
 
     if(error){
         e.preventDefault();
