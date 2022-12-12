@@ -65,7 +65,20 @@ function validate(e){
     } else if(password2!=password){
         password2_error.innerHTML = "Password must be 6 - 15 character long";
         error = true;
-    } else {
+    }else if(!password.match(/[a-z]/)) {
+        password_error.innerHTML="The password must have one lowercase character";
+        error=true;
+    }else if(!password.match(/[A-Z]/)){
+        password_error.innerHTML="Password must have one uppercase character";
+        error=true;
+    }else if(!password.match(/[0-9]/)){
+        password_error.innerHTML="Password must have one number";
+        error=true;
+    }else if(!password.match(/[!@#$%^]/)){
+        password_error.innerHTML="Password must have one special character";
+        error=true;
+    }
+    else {
         password2_error.innerHTML = "";
     }       
 
